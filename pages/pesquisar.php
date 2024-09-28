@@ -25,8 +25,7 @@
         <div>
             <center>
                 <form action="" method="POST">
-                    <input type="text" placeholder="Digite o produto" name="txtpesquisar">
-                    <!-- Adicionando o name ao botão de envio -->
+                    <input type="text" placeholder="Digite o nome do produto" name="txtpesquisar">
                     <input type="submit" name="btnenviar" value="Pesquisar">
                 </form>
             </center>
