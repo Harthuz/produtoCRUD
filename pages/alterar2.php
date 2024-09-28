@@ -53,7 +53,7 @@
                 echo "<br><br><h3>" .$pro->alterar2() ."</h3>";
             }
         ?>
-
+    <br><br>
     <button><a href="../index.html">Voltar</a></button>
 
     </center>
