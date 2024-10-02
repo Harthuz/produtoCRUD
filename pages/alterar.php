@@ -21,6 +21,6 @@
     </form>
 
     <br><br><br>
-    <button><a href="../index.html">Voltar</a></button>
+    <button onclick="window.location.href='../index.html';">Voltar</button>
 </body>
 </html>

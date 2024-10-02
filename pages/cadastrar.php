@@ -14,19 +14,12 @@
     </style>
 </head>
 <body>
+    <center><h1>Cadastrar Produto</h1>
     <form name="cliente" method="POST" action="">
-        <fieldset id="a">
-            <legend><b>Dados do Produto</b></legend>
-            <p>Nome: <input name="txtnome" type="text" size="40" maxlength="40" placeholder="Nome do Produto" </p>
-            <p>Estoque: <input name="txtestoq" type="text" size="40" maxlength="40" placeholder="0"></p>
-        </fieldset>
-        <br>
-        <fieldset id="b">
-            <legend><b>Opções:</b></legend>
-            <br>
-            <input name="btenviar" type="submit" value="Cadastrar"> &nbsp;&nbsp;
-            <input name="limpar" type="reset" value="Limpar">
-        </fieldset>
+        <p>Nome: <input name="txtnome" type="text" size="40" maxlength="40" placeholder="Nome do Produto" </p>
+        <p>Estoque: <input name="txtestoq" type="text" size="40" maxlength="40" placeholder="0"></p>
+        <input name="btenviar" type="submit" value="Cadastrar"> &nbsp;&nbsp;
+        <input name="limpar" type="reset" value="Limpar">
     </form>
 
     <?php
@@ -39,8 +32,8 @@
         echo "<h3><br><br>" .$pro->salvar() ."</h3>";
     }
     ?>
-    <br>
-    <center>
-    <button><a href="../index.html">Voltar</a></button>
+    <br><br><br>
+    <button onclick="window.location.href='../index.html';">Voltar</button>
+    </center>
 </body>
 </html>

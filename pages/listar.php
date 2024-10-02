@@ -7,9 +7,7 @@
 </head>
 <body>
     <center>
-        <font face = "Century Gothic" size = "6">
-            <b>Relação de Produtos Cadastrados</b><br>
-        </font>
+        <h1>Relação de Produtos Cadastrados</h1>
 
         <?php
         include_once '../models/Produto.php';
@@ -26,9 +24,11 @@
             <b><?php echo $pro_mostrar[0]; ?></b>   &nbsp;&nbsp;&nbsp;&nbsp;
                 <?php echo $pro_mostrar[1]; ?>      &nbsp;&nbsp;&nbsp;&nbsp;
                 <?php echo $pro_mostrar[2]; ?>
-            <?php
-        }
-            echo "<br> <br> <button> <a href = '../index.html'> Voltar </a>"; ?>
+        <?php
+            }
+        ?>
+
+        <br><br><button onclick="window.location.href='../index.html';">Voltar</button>
     </center>
 </body>
 </html>

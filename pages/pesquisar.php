@@ -10,26 +10,17 @@
             justify-content: center;
             align-items: center;
         }
-
-        .titulo {
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
     </style>
 </head>
 <body>
-    <h1 class="titulo">Pesquisar Produto</h1>
-    <div class="pesquisarForm">
-        <div>
-            <center>
-                <form action="" method="POST">
-                    <input type="text" placeholder="Digite o nome do produto" name="txtpesquisar">
-                    <input type="submit" name="btnenviar" value="Pesquisar">
-                </form>
-            </center>
-        </div>
+    <div>
+        <center>
+            <h1 class="titulo">Pesquisar Produto</h1>
+            <form action="" method="POST">
+                <input type="text" placeholder="Digite o nome do produto" name="txtpesquisar">
+                <input type="submit" name="btnenviar" value="Pesquisar">
+            </form>
+        </center>
     </div>
 
     <center>
@@ -56,6 +47,6 @@
     </center>
 
     <br>
-    <center><a href="../index.html"><button>Voltar</button></a></center>
+    <center><button onclick="window.location.href='../index.html';">Voltar</button></center>
 </body>
 </html>
