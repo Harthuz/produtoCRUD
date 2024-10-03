@@ -80,7 +80,7 @@ class Produto {
             $this->conn = new Conectar();
             $sql = $this->conn->prepare("SELECT * FROM tblproduto WHERE nome LIKE ?");
             
-            $nome = "%" . $this->getNome() . "%";
+            $nome = $this->getNome() . "%";
             $sql->bindParam(1, $nome, PDO::PARAM_STR);
             
             $sql->execute();
