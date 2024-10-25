@@ -7,6 +7,15 @@
     <title>Menu</title>
 </head>
 <body>
+    <?php
+        session_start();
+
+        // Verifica se o usuário está logado
+        if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
+            header("location:./pages/login.php");
+        }
+    ?>
+
     <div class="containerBotoes">
         <a href="./pages/pesquisar.php">
             <div class="buttonall">
