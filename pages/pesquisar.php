@@ -108,6 +108,6 @@
     </div>
 
     <br>
-    <button onclick="window.location.href='../index.html';">Voltar</button>
+    <button onclick="window.location.href='../index.php';">Voltar</button>
 </body>
 </html>

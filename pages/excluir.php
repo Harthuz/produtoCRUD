@@ -83,7 +83,7 @@
         <label for="txtid">ID do Registro:</label> 
         <input type="text" id="txtid" name="txtid" placeholder="Digite o ID" required> 
         <input name="btnenviar" type="submit" value="Excluir"> 
-        <button type="button" onclick="window.location.href='../index.html';">Voltar</button>
+        <button type="button" onclick="window.location.href='../index.php';">Voltar</button>
     </form>
 
     <?php

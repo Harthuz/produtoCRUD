@@ -15,6 +15,9 @@
             header("location:./pages/login.php");
         }
     ?>
+    
+    <div class="titulo"><h1>PRODUTOS</h1></div>
+    <hr>
 
     <div class="containerBotoes">
         <a href="./pages/pesquisar.php">
