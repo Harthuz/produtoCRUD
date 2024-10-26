@@ -81,5 +81,11 @@
             </div>
         </a>
     </div>
+
+    <div class="sair" onclick="window.location.href='./pages/logout.php'">
+        <div>
+            Sair
+        </div>
+    </div>
 </body>
 </html>

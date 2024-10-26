@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 28-Ago-2024 às 19:23
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.0.13
+-- Host: 127.0.0.1:3306
+-- Tempo de geração: 26/10/2024 às 00:30
+-- Versão do servidor: 8.3.0
+-- Versão do PHP: 8.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,45 +26,46 @@ USE `bdproduto`;
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tblproduto`
+-- Estrutura para tabela `tblproduto`
 --
 
-CREATE TABLE `tblproduto` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tblproduto`;
+CREATE TABLE IF NOT EXISTS `tblproduto` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
-  `estoque` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+  `estoque` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Extraindo dados da tabela `tblproduto`
+-- Despejando dados para a tabela `tblproduto`
 --
 
 INSERT INTO `tblproduto` (`id`, `nome`, `estoque`) VALUES
-(1, 'Camiseta', 50),
+(6, 'asd', 12),
 (2, 'Caneta', 100),
 (3, 'Caderno', 80),
 (4, 'Smartphone', 20),
 (5, 'Mouse', 70);
 
---
--- Índices para tabelas despejadas
---
+-- --------------------------------------------------------
 
 --
--- Índices para tabela `tblproduto`
---
-ALTER TABLE `tblproduto`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
+-- Estrutura para tabela `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `usuario` varchar(50) NOT NULL,
+  `senha` int NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 --
--- AUTO_INCREMENT de tabela `tblproduto`
+-- Despejando dados para a tabela `usuario`
 --
-ALTER TABLE `tblproduto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+INSERT INTO `usuario` (`usuario`, `senha`) VALUES
+('Hernandes', 123456);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

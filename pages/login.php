@@ -58,6 +58,11 @@
             margin-top: 15px; /* Margem acima da mensagem de erro */
             font-size: 0.9em; /* Tamanho da fonte da mensagem de erro */
         }
+
+        .msgerrologin{
+            color: red; /* Cor da mensagem de erro */
+            font-size: 1em; /* Tamanho da fonte da mensagem de erro */
+        }
     </style>
 </head>
 <body>
@@ -70,29 +75,28 @@
             <input type="submit" value="Entrar" name="logar">
             <div class="error-message" id="error-message"></div>
         </form>
-    </div>
+        <?php
+            session_start();
 
-    <?php
-        session_start();
+            if (isset($_POST['logar'])) { // Verifica se o botão de login foi pressionado
+                include_once '../models/Usuario.php';
+                $user = new Usuario();
+                $user->setUsuario($_POST['username']);
+                $user->setSenha($_POST['password']);
+                $status = $user->logar();
 
-        if (isset($_POST['logar'])) { // Verifica se o botão de login foi pressionado
-            include_once '../models/Usuario.php';
-            $user = new Usuario();
-            $user->setUsuario($_POST['username']);
-            $user->setSenha($_POST['password']);
-            $status = $user->logar();
-
-            // Verifica se há resultados
-            if (!empty($status)) {
-                foreach ($status as $status_user) {
-                    $_SESSION['usuario'] = $user->getUsuario();
-                    header("location:./bemvindo.php");
+                // Verifica se há resultados
+                if (!empty($status)) {
+                    foreach ($status as $status_user) {
+                        $_SESSION['usuario'] = $user->getUsuario();
+                        header("location:./bemvindo.php");
+                    }
+                } else {
+                    echo "<div class=\"msgerrologin\">Usuário ou senha inválidos</div>";
                 }
-            } else {
-                echo "<div class=\"msgerrologin\">Usuário ou senha inválidos</div>";
             }
-        }
-    ?>
+        ?>
+    </div>
 
     <script>
         function validateForm() {

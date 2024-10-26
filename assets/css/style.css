@@ -59,3 +59,22 @@ hr{
 .containerBotoes a{
     text-decoration: none;
 }
+
+.sair{
+    width: 100px;
+    background: #ffffff;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    border: 2px solid;
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sair:hover{
+    background: #ffd5d5;
+}
