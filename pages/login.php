@@ -70,8 +70,8 @@
     <div class="login-container">
         <h1>Login</h1>
         <form action="" method="POST" onsubmit="return validateForm()">
-            <input type="text" id="username" name="username" placeholder="Usuário (apenas letras)" required>
-            <input type="password" id="password" name="password" placeholder="Senha (apenas números)" required>
+            <input type="text" id="username" name="username" placeholder="Usuário (apenas letras)" onkeydown="permitirApenasLetras(event)" required>
+            <input type="password" id="password" name="password" placeholder="Senha (apenas números)" onkeydown="permitirApenasNumeros(event)" required>
             <input type="submit" value="Entrar" name="logar">
             <div class="error-message" id="error-message"></div>
         </form>
@@ -121,6 +121,30 @@
             errorMessage.textContent = ""; // Limpa a mensagem de erro
             return true; // Formulário pode ser enviado
         }
+
+        function permitirApenasNumeros(event) {
+            const tecla = event.key;
+
+            if (["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(tecla)) {
+                return;
+            }
+
+            if (!/^[0-9]$/.test(tecla)) {
+                event.preventDefault();
+            }
+        }
+
+        function permitirApenasLetras(event) {
+            const tecla = event.key;
+
+            if (["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(tecla)) {
+                return;
+            }
+
+            if (!/^[a-zA-Z]$/.test(tecla)) {
+                event.preventDefault();
+            }
+        }  
     </script>
     
 </body>
